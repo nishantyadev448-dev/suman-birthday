@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Suman ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- GOLDEN PARTICLES -->
+    <div id="particles"></div>
+
+    <!-- FIRST VIDEO SCREEN -->
+    <section class="video-screen" id="videoScreen">
+
+        <div class="video-content">
+
+            <p class="top-label">A LITTLE SURPRISE FOR YOU</p>
+
+            <h1>Something <span>Beautiful</span><br>is Waiting...</h1>
+
+            <p class="video-subtitle">
+                A special moment, created just for you.
+            </p>
+
+            <button class="play-button" id="playButton">
+                <span class="play-icon">▶</span>
+            </button>
+
+            <p class="click-text">CLICK TO BEGIN YOUR SURPRISE</p>
+
+            <video id="firstVideo" playsinline preload="metadata">
+                <source src="assets/videos/video1.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+            <p id="videoError" class="video-error">
+                Video load nahi hui. File location check karo.
+            </p>
+
+            <button id="skipButton" class="skip-button">
+                Skip Intro →
+            </button>
+
+        </div>
+
+    </section>
+
+
+   
+<!-- WELCOME SCREEN -->
+<section class="welcome-screen hidden" id="welcomeScreen">
+
+    <div class="welcome-card">
+        <div class="gold-line"></div>
+
+        <p class="welcome-label">A DAY MADE JUST FOR YOU</p>
+
+        <h1>Welcome,<br>
+            <span>Suman</span>
+        </h1>
+
+        <p class="welcome-message">
+            Today is not just another day...
+            It's a celebration of someone truly special.
+        </p>
+
+        <div class="gold-divider">
+            <span>✦</span>
+        </div>
+
+        <p class="bottom-text">
+            YOUR SPECIAL JOURNEY BEGINS HERE
+        </p>
+    </div>
+
+    <button class="continue-btn" id="continueButton">
+        Continue the Surprise <span>✦</span>
+    </button>
+
+</section>
+
+
+<!-- SECOND VIDEO SCREEN -->
+<section class="second-video-screen hidden" id="secondVideoScreen">
+
+    <div class="second-video-content">
+
+        <p class="second-label">A SPECIAL MEMORY</p>
+
+        <h1>Just For <span>You</span></h1>
+
+        <p class="second-subtitle">
+            Every beautiful moment deserves to be remembered.
+        </p>
+
+        <video id="secondVideo" playsinline preload="metadata">
+            <source src="assets/videos/video2.mp4" type="video/mp4">
+        </video>
+
+        <p id="secondVideoError" class="video-error">
+            Second video load nahi hui. File location check karo.
+        </p>
+
+        <button id="secondSkipButton" class="skip-button">
+            Skip Video →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- SECOND VIDEO END SCREEN -->
+<section class="video-end-screen hidden" id="videoEndScreen">
+
+    <div class="end-content">
+
+        <p class="end-small">AND NOW...</p>
+
+        <h1>Something <span>Magical</span></h1>
+
+        <p>Get ready for your special day ✨</p>
+
+        <button id="birthdayContinueButton" class="continue-btn">
+            Reveal The Surprise ✦
+        </button>
+
+    </div>
+
+</section>
+ 
+
+<!-- HAPPY BIRTHDAY INTRO -->
+<section class="birthday-intro hidden" id="birthdayIntro">
+
+    <div class="birthday-glow"></div>
+
+    <div class="birthday-content">
+
+        <p class="birthday-small">TODAY IS ALL ABOUT YOU</p>
+
+        <div class="birthday-cake">🎂</div>
+
+        <h1>
+            Happy Birthday
+            <span>Suman!</span>
+        </h1>
+
+        <p class="birthday-subtitle">
+            A beautiful day for a beautiful person.
+        </p>
+
+        <button class="continue-btn" id="startMessages">
+            Read My Messages ✦
+        </button>
+
+    </div>
+
+    <div class="confetti-container" id="confetti"></div>
+
+</section>
+
+
+<!-- THREE MESSAGE SECTION -->
+<section class="messages-screen hidden" id="messagesScreen">
+
+    <div class="message-wrapper">
+
+        <p class="message-top-label">
+            ✦ A FEW WORDS FROM THE HEART ✦
+        </p>
+
+        <div class="message-progress" id="messageProgress">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="message-card" id="messageCard">
+
+            <p class="message-number" id="messageNumber">
+                MESSAGE 01 / 03
+            </p>
+
+            <h1 id="messageTitle">
+                A Special Wish ❤️
+            </h1>
+
+            <div class="message-divider">✦</div>
+
+            <div class="message-text" id="messageText"></div>
+
+            <button id="showFullMessage" class="show-full-btn">
+                Show Full Message
+            </button>
+
+            <button id="nextMessage" class="continue-btn message-next">
+                Next Message →
+            </button>
+
+        </div>
+
+        <p class="message-footer">
+            MADE WITH WARMTH & GOOD WISHES ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MESSAGE COMPLETION SCREEN -->
+<section class="message-complete hidden" id="messageComplete">
+
+    <div class="complete-card">
+
+        <div class="complete-icon">💌</div>
+
+        <h1>With Best Wishes</h1>
+
+        <p>
+            Some wishes are too special to fit into words.
+            <br>
+            Hope your day is filled with happiness! ❤️
+        </p>
+
+        <div class="complete-star">✦ ✨ ✦</div>
+
+        <p class="complete-small">
+            THERE ARE MORE MEMORIES WAITING FOR YOU...
+        </p>
+
+        <button id="openGallery" class="continue-btn">
+            View Our Memories ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- CINEMATIC PHOTO GALLERY -->
+<section class="gallery-screen hidden" id="galleryScreen">
+
+    <div class="gallery-container">
+
+        <p class="gallery-label">✦ A COLLECTION OF MEMORIES ✦</p>
+
+        <h1 class="gallery-heading">
+            Beautiful <span>Memories</span>
+        </h1>
+
+        <p class="gallery-subtitle">
+            Every picture holds a special moment.
+        </p>
+
+        <div class="slideshow">
+
+            <div class="photo-frame">
+                <img id="galleryImage" src="assets/image/image1.png"
+                     alt="Memory photo">
+
+                <div class="photo-overlay"></div>
+
+                <div class="photo-counter" id="photoCounter">
+                    01 / 07
+                </div>
+            </div>
+
+            <div class="photo-caption" id="photoCaption">
+                A beautiful memory ✨
+            </div>
+
+            <div class="gallery-controls">
+                <button id="previousPhoto" class="gallery-arrow">
+                    ←
+                </button>
+
+                <div class="gallery-dots" id="galleryDots"></div>
+
+                <button id="nextPhoto" class="gallery-arrow">
+                    →
+                </button>
+            </div>
+
+        </div>
+
+        <button id="galleryFinish" class="continue-btn">
+            Continue the Surprise ✦
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL FIREWORKS SCREEN -->
+<section class="finale-screen hidden" id="finaleScreen">
+
+    <canvas id="fireworksCanvas"></canvas>
+
+    <div class="finale-content">
+
+        <p class="finale-label">
+            ✦ A DAY TO REMEMBER ✦
+        </p>
+
+        <div class="finale-stars">✨ 🎆 ✨</div>
+
+        <h1>
+            Happy Birthday
+            <span>Suman!</span>
+        </h1>
+
+        <div class="finale-divider">✦ ✧ ✦</div>
+
+        <h2>The End...</h2>
+
+        <p class="finale-message">
+            But beautiful memories stay forever. ❤️
+        </p>
+
+        <p class="finale-wish">
+            Keep Smiling • Keep Shining • Stay Happy
+        </p>
+
+        <button id="replayFireworks" class="finale-button">
+            Celebrate Again ✨
+        </button>
+
+        <p class="finale-footer">
+            MADE WITH LOVE & BEST WISHES
+        </p>
+
+    </div>
+
+</section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
